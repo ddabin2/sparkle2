@@ -1,0 +1,14 @@
+diff --git a/src/containers/tw-security-manager.jsx b/src/containers/tw-security-manager.jsx
+index 7451c33..21f6531 100644
+--- a/src/containers/tw-security-manager.jsx
++++ b/src/containers/tw-security-manager.jsx
+@@ -30,6 +30,9 @@ const isTrustedExtension = url => (
+     // For development.
+     url.startsWith('http://localhost:8000/') ||
+ 
++    // Sparkle: our AI helper extension, served by our own server.
++    url === 'https://sparkle-1-1jho.onrender.com/extension.js' ||
++
+     extensionsTrustedByUser.has(url)
+ );
+ 
